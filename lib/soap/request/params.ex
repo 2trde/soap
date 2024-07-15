@@ -30,7 +30,7 @@ defmodule Soap.Request.Params do
       |> add_envelope_tag_wrapper(wsdl, operation)
       |> document
       |> generate(format: :none)
-      |> String.replace(["\n", "\t"], "")
+      |> String.replace(["\t"], "")
     else
       {:error, message} -> message
     end
